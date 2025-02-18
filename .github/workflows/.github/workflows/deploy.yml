@@ -1,0 +1,21 @@
+name: Deploy Project
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Display Git Version
+        run: git --version
+
+      - name: List All Files
+        run: ls -la
+
+      - name: Show Current Branch
+        run: git branch
+
+      - name: Build Project
+        run: echo "Building the Project..."
